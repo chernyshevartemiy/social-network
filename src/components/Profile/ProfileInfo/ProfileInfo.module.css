@@ -1,0 +1,29 @@
+.Profile__img {
+    width: 100%;
+    height: 450px;
+}
+
+.User {
+    display: flex;
+    padding-top: 34px;
+}
+
+.User__avatar {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+    border: 10px solid brown;
+    margin: 0 50px 0 30px
+}
+
+.User__dataList {
+    list-style: none;
+}
+
+.User__dataList li + li {
+    margin-top: 20px;
+}
+
+.User__dataList li span {
+    font-weight: 1000;
+}

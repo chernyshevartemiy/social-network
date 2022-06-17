@@ -1,0 +1,30 @@
+*::after,
+*::before,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "JetBrains Mono";
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+.App {
+    display: grid;
+    grid-template-areas: "h h" "n c";
+    grid-template-rows: 100px 1fr ;
+    grid-template-columns: 2fr 10fr ;
+    grid-gap: 20px;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.App__content {
+    grid-area: c;
+    background-color: lightslategray;
+}

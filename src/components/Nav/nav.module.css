@@ -1,0 +1,32 @@
+.Nav {
+    grid-area: n;
+    background-color: chocolate;
+}
+
+.Nav__list {
+    list-style: none;
+    color: #FFFFFF;
+    margin: 70px
+}
+
+.Nav__list li{
+    margin-bottom: 8px;
+}
+
+.Nav__list li a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.Nav__list li:nth-child(5) {
+    margin-top: 20px;
+}
+
+.Nav__list a.active {
+    color: gold;
+}
+
+.Item {
+    text-decoration: none;
+    color: #FFFFFF;
+}

@@ -1,0 +1,17 @@
+.Header {
+    grid-area: h;
+    background-color: olivedrab;
+    max-width: 1200px;
+}
+
+.Logo {
+    margin: 10px auto;
+    display: block;
+    width: 200px;
+
+}
+
+.Logo__img {
+    width: 200px;
+    display: block;
+}

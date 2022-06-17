@@ -1,0 +1,40 @@
+.Posts {
+    padding: 50px;
+    border: 7px solid firebrick;
+    margin-top: 40px;
+}
+
+.MyPosts {
+    margin-bottom: 20px;
+}
+
+.TextArea {
+    padding: 0;
+    resize: none;
+    min-width: 550px;
+    height: 100px;
+    font-size: 20px;
+    overflow: hidden;
+    background-color: seashell;
+    outline: none;
+    border: 2px solid dimgray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

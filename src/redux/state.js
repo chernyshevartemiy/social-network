@@ -1,3 +1,6 @@
+import profileReducer from "./profileReducer";
+import dialogsReducer from "./dialogsReducer";
+
 let store = {
     _state: {
         postsPage: {
@@ -52,69 +55,11 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === addPost) {
-            let newPost = {
-                id: 4, message: this._state.postsPage.newPostText[0].message
-            }
-            this._state.postsPage.newPostsData.push(newPost);
-            this._state.postsPage.newPostText[0].message = "";
-            this._callSubscriber();
-        } else if (action.type === updateNewPost) {
-            this._state.postsPage.newPostText[0].message = action.newText;
-            this._callSubscriber();
-        } else if (action.type = updateNewMessageBody) {
-            this._state.dialogsPage.newMessageBody = action.body;
-            this._callSubscriber();
-        } else if (action.type = sentMessage) {
-            let body = this.state.dialogsPage.newMessageBody;
-            this._state.dialogsPage.newMessageBody = "";
-            this.state.dialogsPage.messagesData.push({id: 6, message: body});
-            this._callSubscriber();
+        this.getState().postsPage = profileReducer(this.getState().postsPage, action);
+        this.getState().dialogsPage = dialogsReducer(this.getState().dialogsPage, action);
+        this._callSubscriber();
         }
-    }
 }
 
-const addPost = "ADD-POST"
-const updateNewPost = "UPDATE-NEW-POST"
-const updateNewMessageBody = "UPDATE-NEW-MESSAGE-BODY"
-const sentMessage = "SENT-MESSAGE"
 
-const addPostActionCreator = () => {
-    return (
-        {
-            type: addPost
-        }
-    )
-}
-
-const onPostActionCreator = (text) => {
-    return (
-        {
-            type: updateNewPost,
-            newText: text
-        }
-    )
-}
-
-const sentMessageCreator = () => {
-    return (
-        {
-            type: sentMessage,
-
-        }
-    )
-}
-
-const updateNewMessageBodyCreator = (body) => {
-    return (
-        {
-            type: updateNewMessageBody,
-            body: body
-        }
-    )
-}
-
-export {sentMessageCreator}
-export {addPostActionCreator}
-export {onPostActionCreator}
 export default store

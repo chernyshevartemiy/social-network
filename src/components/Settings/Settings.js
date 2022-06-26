@@ -5,3 +5,5 @@ const Settings = () => {
         <div className={s.Settings}>Settings</div>
     )
 }
+
+export default Settings

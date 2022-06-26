@@ -5,3 +5,5 @@ const Music = () => {
         <div className={s.Music}>Music</div>
     )
 }
+
+export default Music

@@ -5,9 +5,9 @@ let store = {
     _state: {
         postsPage: {
             newPostsData: [
-                {id: 1, message: "I'm gonna make website today"},
-                {id: 2, message: "I learnt React"},
-                {id: 3, message: "Hello I'm gonna make you happy"},
+                {id: 0, message: "I'm gonna make website today"},
+                {id: 1, message: "I learnt React"},
+                {id: 2, message: "Hello I'm gonna make you happy"},
             ],
             postsData: [
                 {id: 1, message: "Hello my name is Jordan"},
@@ -61,5 +61,5 @@ let store = {
         }
 }
 
-
+window.store = store
 export default store

@@ -7,6 +7,7 @@ const profileReducer = (state, action) => {
             let newPost = {
                 id: 4, message: state.newPostText[0].message
             }
+            newPost.id = state.newPostsData.length
             state.newPostsData.push(newPost);
             state.newPostText[0].message = "";
             return state;

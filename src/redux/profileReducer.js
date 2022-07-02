@@ -1,7 +1,26 @@
 const addPost = "ADD-POST"
 const updateNewPost = "UPDATE-NEW-POST"
 
-const profileReducer = (state, action) => {
+let initialState = {
+    newPostsData: [
+        {id: 0, message: "I'm gonna make website today"},
+        {id: 1, message: "I learnt React"},
+        {id: 2, message: "Hello I'm gonna make you happy"},
+    ],
+    postsData: [
+        {id: 1, message: "Hello my name is Jordan"},
+        {id: 2, message: "31.05.2022 I played basketball only with myself does anyone want to play with me?"},
+        {id: 3, message: "I like raining"},
+        {id: 4, message: "Ilon Mask is my favorite  millionaire"},
+        {id: 5, message: "I'm gonna watch Game of Thrones btw my favorite serial"},
+        {id: 6, message: "Today 1 June of 2022 Elnur and I played Fortnite It was funny"},
+    ],
+
+    newPostText: [
+        {id: 1, message: ""}
+    ]
+}
+const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case addPost:
             let newPost = {

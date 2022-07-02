@@ -1,7 +1,8 @@
 const updateNewMessageBody = "UPDATE-NEW-MESSAGE-BODY"
 const sentMessage = "SENT-MESSAGE"
 
-const dialogsReducer = (state, action) => {
+let initialState = {}
+const dialogsReducer = (state = initialState, action) => {
     if (action.type === updateNewMessageBody) {
     state.newMessageBody = action.body;
 } else if (action.type === sentMessage) {

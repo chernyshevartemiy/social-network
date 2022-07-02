@@ -8,7 +8,8 @@ const Profile = (props) => {
         <div className={s.Profile}>
             <ProfileInfo/>
             <MyPostsContainer newPostsData = {props.newPostsData} postsData = {props.postsData} dispatch = {props.dispatch} newPostText = {props.newPostText}/>
-        </div>)
+        </div>
+    )
 }
 
 export default Profile

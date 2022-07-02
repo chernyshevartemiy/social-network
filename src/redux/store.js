@@ -25,18 +25,16 @@ let store = {
 
         dialogsPage: {
             dialogsData: [
-                {id: 1, name: "John"},
-                {id: 2, name: "Alexandr"},
-                {id: 3, name: "Fedora"},
-                {id: 4, name: "Bob"}
+                {id: 0, name: "John"},
+                {id: 1, name: "Alexandr"},
+                {id: 2, name: "Fedora"},
+                {id: 3, name: "Bob"}
             ],
             messagesData: [
-                {id: 1, message: "Hello do you wanna go to the street?"},
-                {id: 2, message: "I forgot my watches at your home can I come today to take them?"},
-                {id: 3, message: "Hello we had a great day yesterday I would like to met you with you one more time;)"},
-                {
-                    id: 4,
-                    message: "We finished our deal you were a good worker If I have the same work I will call you to ask and you will be get paid for it too but much bigger you are such an amazing person it's exactly truth"
+                {id: 0, message: "Hello do you wanna go to the street?"},
+                {id: 1, message: "I forgot my watches at your home can I come today to take them?"},
+                {id: 2, message: "Hello we had a great day yesterday I would like to met you with you one more time;)"},
+                {id: 3, message: "We finished our deal you were a good worker If I have the same work I will call you to ask and you will be get paid for it too but much bigger you are such an amazing person it's exactly truth"
                 }
             ],
             newMessageBody: "",

@@ -2,7 +2,7 @@ import './App.css';
 import Header from "./components/Header/Header"
 import Nav from "./components/Nav/Nav"
 import Profile from "./components/Profile/Profile";
-import Dialogs from "./components/Dialogs/Dialogs";
+import DialogsContainer from "./components/Dialogs/dialogsContainer";
 import News from "./components/News/News"
 import Music from "./components/Music/Music"
 import Settings from "./components/Settings/Settings"
@@ -19,7 +19,7 @@ const App = (props) => {
                 <div className="App__content">
                     <Routes>
                         <Route path='/Profile' element = {<Profile/>}/>
-                        {/*<Route path='/Dialogs' element ={ <Dialogs/>}/>*/}
+                        <Route path='/Dialogs' element ={<DialogsContainer/>}/>
                         <Route path='/News' element={<News/>}/>
                         <Route path='/Music' element={<Music/>}/>
                         <Route path='/Settings' element={<Settings/>}/>

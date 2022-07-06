@@ -1,11 +1,11 @@
 import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
+import store from "../../redux/store";
 
-
-let mapStateToProps = (state) => {
+let mapStateToProps = () => {
     return (
-        {dialogsData: state.dialogsPage.dialogsData,
-        messagesData: state.dialogsPage.messagesData}
+        {dialogsData: store._state.dialogsPage.dialogsData,
+        messagesData: store._state.dialogsPage.messagesData}
     )
 }
 

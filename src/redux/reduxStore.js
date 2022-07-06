@@ -3,7 +3,7 @@ import profileReducer from "./profileReducer";
 import dialogsReducer from "./dialogsReducer";
 
 let reducersBunch = combineReducers({
-    profilePage: profileReducer,
+    postsPage: profileReducer,
     dialogsPage: dialogsReducer,
 
 })

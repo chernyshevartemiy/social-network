@@ -19,14 +19,14 @@ const MyPosts = (props) => {
     let newPostsElements =
         props.newPostsData.map((e) => {
             return (
-                <NewPost message = {e.message}/>
+                <NewPost key = {e.id} message = {e.message}/>
             )
         })
 
     let postsElements =
         props.postsData.map((e) => {
             return (
-                <Post message = {e.message}/>
+                <Post key = {e.id} message = {e.message}/>
             )
         })
 

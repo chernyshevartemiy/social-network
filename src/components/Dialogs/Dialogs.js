@@ -1,7 +1,7 @@
 import s from "./Dialogs.module.css"
 import Initials from "./Dialog/Initials/Initials";
 import Messages from "./Dialog/Messages/Messages";
-
+// Create functions with method 'map', necessarily be here
 const Dialogs = (props) => {
     return (
         <div className={s.Dialogs}>

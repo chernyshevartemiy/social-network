@@ -18,8 +18,25 @@ let initialState = {
         ],
         newMessageBody: "",
     }}
+// Here will be spread statements
 const dialogsReducer = (state = initialState, action) => {
-    if (action.type === updateNewMessageBody) {
+	switch(action.type) {
+		case updateNewMessageBody: 
+			return {
+				...state,
+				newMessageBody: action.body
+			}
+		case sentMessage: 
+			let body = state.newMessageBody
+			return {
+				...state,
+				newMessageBody: "",
+				messages: [...state.messages, {id: 4, message: body}]
+			};
+			
+	}
+	if (action.type === updateNewMessageBody) {
+	
     state.newMessageBody = action.body;
 } else if (action.type === sentMessage) {
         let body = state.newMessageBody;
@@ -28,7 +45,7 @@ const dialogsReducer = (state = initialState, action) => {
     }
     return state
 }
-
+// Here will be spread statements
 const sentMessageCreator = () => {
     return (
         {

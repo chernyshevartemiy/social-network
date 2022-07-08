@@ -5,14 +5,13 @@ import * as axios from 'axios'
 const Users = (props) => {
 	let findUsers = () => {
 			if (props.users.length === 0){
-		axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-			props.setUsers(response.data.items)
-		})
+				axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+				props.setUsers(response.data.items)
+			})
 		props.setUsers([
 		{id: 1, followed: false, photoUrl: userImg, name: 'Boris', status: 'I have been learning programming for 2 years', location: {city: 'London', country: 'UK'}},
 		{id: 2, followed: true, photoUrl: userImg, name: 'Nathan', status: 'I like travelling', location: {city: 'New York', country: 'US'}}]
 	)
-	
 	}
 }
 

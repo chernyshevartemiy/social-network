@@ -15,7 +15,6 @@ class UserC extends React.Component {
 	render() {
 			return (
 		<div>
-			<button className = {s.User__finder} onClick = {this.findUsers}>Find Users</button>
 			{this.props.users.map((e) => {
 				return <div className = {s.User} key = {e.id}>
 							<div className = {s.User__profile}>

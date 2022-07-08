@@ -1,0 +1,51 @@
+.User {
+	display: flex;
+	border: solid orange 3px;
+	margin-bottom: 0px;
+}
+
+.User__profile {
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+	padding: 15px 0 10px 40px;
+}
+
+.User__img {
+	width: 80px;
+	height: 80px;
+	margin-bottom: 12px;
+	border: solid orange 4px;
+}
+
+.User__button {
+	width: 80px;
+	height: 25px;
+	font-size: 15px;
+	border: solid white 2px;
+}
+
+.User__initials {
+	margin-bottom: 10px
+}
+
+.User__info {
+	margin: 15px 0px 10px 40px;
+}
+
+
+.User__name {
+	margin-bottom: 10px;
+}
+
+.User_description {
+	font-size: 17px;
+}
+
+.User__country {
+	font-size: 17px;
+}
+
+.User__city {
+	font-size: 17px;
+}

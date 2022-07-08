@@ -6,11 +6,11 @@ import DialogsContainer from "./components/Dialogs/dialogsContainer";
 import News from "./components/News/News"
 import Music from "./components/Music/Music"
 import Settings from "./components/Settings/Settings"
+import UsersContainer from './components/Users/UsersContainer';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 
 const App = (props) => {
-
     return (
         <BrowserRouter>
             <div className="App">
@@ -20,7 +20,8 @@ const App = (props) => {
                     <Routes>
                         <Route path='/Profile' element = {<Profile/>}/>
                         <Route path='/Dialogs' element ={<DialogsContainer/>}/>
-                        <Route path='/News' element={<News/>}/>
+						<Route path='/News' element={<News/>}/>
+						<Route path='/Users' element={<UsersContainer/>}/>
                         <Route path='/Music' element={<Music/>}/>
                         <Route path='/Settings' element={<Settings/>}/>
                     </Routes>

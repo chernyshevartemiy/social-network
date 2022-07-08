@@ -3,7 +3,8 @@ import userImg from '../../img/profile.png'
 import * as axios from 'axios'
 
 const Users = (props) => {
-	if (props.users.length === 0){
+	let findUsers = () => {
+			if (props.users.length === 0){
 		axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
 			props.setUsers(response.data.items)
 		})
@@ -11,10 +12,13 @@ const Users = (props) => {
 		{id: 1, followed: false, photoUrl: userImg, name: 'Boris', status: 'I have been learning programming for 2 years', location: {city: 'London', country: 'UK'}},
 		{id: 2, followed: true, photoUrl: userImg, name: 'Nathan', status: 'I like travelling', location: {city: 'New York', country: 'US'}}]
 	)
+	
 	}
+}
 
 	return (
 		<div>
+			<button className = {s.User__finder} onClick = {findUsers}>Find Users</button>
 			{props.users.map((e) => {
 				return <div className = {s.User} key = {e.id}>
 							<div className = {s.User__profile}>

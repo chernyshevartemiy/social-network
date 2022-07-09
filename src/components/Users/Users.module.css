@@ -4,6 +4,10 @@
 	margin-bottom: 0px;
 }
 
+.selectedPage {
+	font-weight: 800;
+	text-decoration: underline;
+}
 
 .User__profile {
 	display: flex;

@@ -9,7 +9,7 @@ let initialState = {
 		
 	],
 	pageSize: 5,
-	totalUsersCount: 1,
+	totalUsersCount: 0,
 	currentPage: 1,
 }
 

@@ -25,8 +25,6 @@ class UserC extends React.Component {
 		for (let i = 1; i<= pagesCount; i++) {
 			pages.push(i);
 		}
-
-
 			return (
 		<div>
 			{this.props.users.map((e) => {

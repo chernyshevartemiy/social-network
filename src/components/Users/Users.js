@@ -1,25 +1,20 @@
-import s from './Users.module.css'
-import userImg from '../../img/profile.png'
-import * as axios from 'axios'
+import React from "react";
+import s from './Users.module.css';
+import userImg from '../../img/profile.png';
 
-const Users = (props) => {
-	let findUsers = () => {
-			if (props.users.length === 0){
-				axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-				props.setUsers(response.data.items)
-			})
-		props.setUsers([
-		{id: 1, followed: false, photoUrl: userImg, name: 'Boris', status: 'I have been learning programming for 2 years', location: {city: 'London', country: 'UK'}},
-		{id: 2, followed: true, photoUrl: userImg, name: 'Nathan', status: 'I like travelling', location: {city: 'New York', country: 'US'}}]
-	)
+let Users = (props) => {
+	let pagesCount = Math.ceil(
+		props.totalUsersCount / props.pageSize
+	);
+
+	let pages = [];
+	for (let i = 1; i <= pagesCount; i++) {
+		pages.push(i);
 	}
-}
-
 	return (
 		<div>
-			<button className = {s.User__finder} onClick = {findUsers}>Find Users</button>
 			{props.users.map((e) => {
-				return <div className = {s.User} key = {e.id}>
+				return <div className = {s.User} key = {`${e.id}_${e.name}`}>
 							<div className = {s.User__profile}>
 								<img className = {s.User__img} src={e?.photos?.small || userImg} alt="#"/>
 								{e.followed ? <button className = {s.User__button} onClick = {() => { props.unfollow(e.id) }}>Unfollow</button> : <button className = {s.User__button} onClick = {() => { props.follow(e.id) }}>Follow</button>}
@@ -36,9 +31,11 @@ const Users = (props) => {
 							</div>
 					   </div>
 			})}
+					   {pages.map(p => {
+						   return <span className = {props.currentPage === p && s.selectedPage} onClick = {() => {props.onPageChanged(p)}}>{p}</span>
+					   })}	   
 		</div>
 	)
-}
-
+};
 
 export default Users

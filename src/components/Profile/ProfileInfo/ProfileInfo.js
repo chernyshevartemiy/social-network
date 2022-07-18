@@ -1,11 +1,16 @@
 import s from "./ProfileInfo.module.css"
+import Preloader from '../../common/preloader/Preloader'
 
 const ProfileInfo = (props) => {
+	if (!props.profile) {
+		return <Preloader/>
+	}
     return (
         <div className={s.ProfileInfo}>
             <img className={s.Profile__img}
                  src="https://images.unsplash.com/photo-1653641563301-bbb49a19d18b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
-                 alt="#"/>
+				alt="#"/>
+			<img src="{props.profile.photos.small}" alt=""/>
             <div className={s.User}>
                 <img className={s.User__avatar}
                      src="https://images.unsplash.com/photo-1653718308697-90caaf8b6b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"

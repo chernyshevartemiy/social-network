@@ -68,14 +68,15 @@ const onPostActionCreator = (text) => {
     )
 }
 
-const setUserProfile = (profile)=> {
+const setUserProfile = (profile) => {
 	return (
 		{
 			type: SET_USER_PROFILE,
-			profile
+			profile: profile
 		}
 	)
 }
+
 
 export {setUserProfile}
 export {onPostActionCreator}

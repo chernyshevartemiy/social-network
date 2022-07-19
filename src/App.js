@@ -1,7 +1,7 @@
 import './App.css';
 import Header from "./components/Header/Header"
 import Nav from "./components/Nav/Nav"
-import ProfileContainer from "./components/Profile/Profile";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 import DialogsContainer from "./components/Dialogs/dialogsContainer";
 import News from "./components/News/News"
 import Music from "./components/Music/Music"
@@ -18,7 +18,7 @@ const App = (props) => {
                 <Nav/>
                 <div className="App__content">
                     <Routes>
-						<Route path='/Profile' element = {<ProfileContainer/>}/>
+						<Route path='/Profile/*' element = {<ProfileContainer/>}/>
                         <Route path='/Dialogs' element ={<DialogsContainer/>}/>
 						<Route path='/News' element={<News/>}/>
 						<Route path='/Users' element={<UsersContainer/>}/>

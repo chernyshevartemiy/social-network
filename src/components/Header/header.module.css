@@ -15,3 +15,14 @@
     width: 200px;
     display: block;
 }
+
+.Header__block {
+	position: absolute;
+	left: 1200px;
+	top: 50px;
+	text-decoration: underline;
+}
+
+.Header__block a {
+	font-size: 26px;
+}

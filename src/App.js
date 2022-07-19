@@ -1,5 +1,5 @@
 import './App.css';
-import Header from "./components/Header/Header"
+import HeaderContainer from "./components/Header/HeaderContainer"
 import Nav from "./components/Nav/Nav"
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import DialogsContainer from "./components/Dialogs/dialogsContainer";
@@ -14,7 +14,7 @@ const App = (props) => {
     return (
         <BrowserRouter>
             <div className="App">
-                <Header/>
+                <HeaderContainer/>
                 <Nav/>
                 <div className="App__content">
                     <Routes>

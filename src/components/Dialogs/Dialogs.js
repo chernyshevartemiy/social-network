@@ -4,6 +4,8 @@ import Messages from "./Dialog/Messages/Messages";
 import { Navigate } from "react-router-dom";
 // Create functions with method 'map', necessarily be here
 const Dialogs = (props) => {
+	{alert("asdas")}
+		{alert("asdas")}
 	return (
 		<div className={s.Dialogs}>
 			<div className={s.Dialogs__items}>

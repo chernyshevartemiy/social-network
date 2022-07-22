@@ -9,6 +9,7 @@ import {
 import React from "react";
 import Users from "./Users";
 import Preloader from "../common/preloader/Preloader";
+import withAuthRedirect from "../../hoc/WithAuthRedirect";
 
 class UsersC extends React.Component {
 	componentDidMount() {
@@ -37,6 +38,8 @@ class UsersC extends React.Component {
 	}
 }
 
+let withRedirect = withAuthRedirect(UsersC)
+
 let mapStateToProps = (state) => {
 	return {
 		users: state.userPage.users,
@@ -53,6 +56,6 @@ const UsersContainer = connect(mapStateToProps, {
 	unfollow,
 	setCurrentPage,
 	setTotalUsersCount,
-})(UsersC);
+})(withRedirect);
 
 export default UsersContainer;

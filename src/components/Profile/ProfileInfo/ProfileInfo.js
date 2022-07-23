@@ -21,7 +21,7 @@ const ProfileInfo = (props) => {
                         <li className={s.User__dataItem}><span>Date of birth: </span>14 September</li>
                         <li className={s.User__dataItem}><span>City: </span> Kazan</li>
                         <li className={s.User__dataItem}><span>Education: </span>Harvard University</li>
-						<li className={s.User__dataItem}><ProfileStatus status = "Hello my friends" /></li>
+						<li className={s.User__dataItem}><ProfileStatus status = {props.status} updateStatus = {props.updateStatus}/></li>
                     </ul>
                 </div>
             </div>

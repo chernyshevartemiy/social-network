@@ -1,7 +1,6 @@
 import s from "./Dialogs.module.css";
 import Initials from "./Dialog/Initials/Initials";
 import Messages from "./Dialog/Messages/Messages";
-import { Navigate } from "react-router-dom";
 // Create functions with method 'map', necessarily be here
 const Dialogs = (props) => {
 	return (

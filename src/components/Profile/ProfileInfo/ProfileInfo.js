@@ -1,5 +1,6 @@
 import s from "./ProfileInfo.module.css"
 import Preloader from '../../common/preloader/Preloader'
+import ProfileStatus from "./ProfileStatus"
 
 const ProfileInfo = (props) => {
 	if (!props.profile) {
@@ -20,7 +21,7 @@ const ProfileInfo = (props) => {
                         <li className={s.User__dataItem}><span>Date of birth: </span>14 September</li>
                         <li className={s.User__dataItem}><span>City: </span> Kazan</li>
                         <li className={s.User__dataItem}><span>Education: </span>Harvard University</li>
-                        <li className={s.User__dataItem}><span>Web Site: </span> You're already here;)</li>
+						<li className={s.User__dataItem}><ProfileStatus status = "Hello my friends" /></li>
                     </ul>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import userAPI, { profileAPI } from "../api/api"
 
 const addPost = "ADD-POST"
-const updateNewPost = "UPDATE-NEW-POST"
 const SET_USER_PROFILE = "SET_USER_PROFILE"
 const SET_STATUS = "SET_STATUS"
 
@@ -20,9 +19,6 @@ let initialState = {
         {id: 6, message: "Today 1 June of 2022 Elnur and I played Fortnite It was funny"},
     ],
 
-    newPostText: [
-        {id: 1, message: ""}
-	],
 	profile: null,
 	status: "",
 }
@@ -30,25 +26,19 @@ const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case addPost: 
             let newPost = {
-                id: 5, message: state.newPostText[0].message
+                id: 5, message: action.newPostText
 			}
 			state.newPostsData = [...state.newPostsData]
 			newPost.id = state.newPostsData.length
 			return {
 				...state,
 				newPostsData: [...state.newPostsData, newPost],
-				...state.newPostText[0].message = ""
 			}
 			//stateCopy.newPostsData = [...state.newPostsData]
 			//newPost.id = stateCopy.newPostsData.length
 			//stateCopy.newPostsData.push(newPost);
 			//   state.newPostText[0].message = "";
 			//  return stateCopy;
-        case updateNewPost:
-            let stateCopy = {...state}
-            stateCopy.newPostText = [...state.newPostText]
-            stateCopy.newPostText[0].message = action.newText;
-			return stateCopy;
 		case SET_USER_PROFILE:
 			return {...state, profile: action.profile}
 		case SET_STATUS:
@@ -66,22 +56,15 @@ const setStatus = (status) => {
 	)
 }
 
-const addPostActionCreator = () => {
+const addPostActionCreator = (newPostText) => {
     return (
         {
-            type: addPost
+            type: addPost,
+			newPostText
         }
     )
 }
 
-const onPostActionCreator = (text) => {
-    return (
-        {
-            type: updateNewPost,
-            newText: text
-        }
-    )
-}
 
 const setUserProfile = (profile) => {
 	return (
@@ -117,6 +100,5 @@ export {getStatus}
 export {setStatus}
 export {getUserProfile}
 export {setUserProfile}
-export {onPostActionCreator}
 export {addPostActionCreator}
 export default profileReducer
